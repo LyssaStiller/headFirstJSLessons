@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="author" content="stillerCodes">
+    <meta name="description" content="making a pet rock interactive">
+    <title>iRock - The Virtual Pet Rock</title>
+
+    <script type="text/javascript">
+      function showPopUp(){  alert("Hello, I am your pet rock"); }
+
+      function touchRock(){
+        var userName = prompt("What is your name?", "Enter your name here.");
+
+        if(userName){
+          alert(`It is good to meeet you ${userName}.`)
+
+          document.getElementById("rockImg").src="./happyRock.png"
+        }
+      }
+   </script>
+
+  </head>
+  <body onload= showPopUp()>
+
+    <div style="margin-top:100px;
+    text-align: center;">
+    <img id="rockImg" src="./sadRock.png" alt="iRock"
+    style="cursor: pointer"
+    onclick="touchRock()">
+    </div>
+  </body>
+</html>
+
+
